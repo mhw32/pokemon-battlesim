@@ -1,0 +1,182 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(30%); /* Start off-screen */
+    opacity: 0; /* Make it invisible at the start */
+  }
+  100% {
+    transform: translateX(0); /* End at the final position */
+    opacity: 1; /* Fully visible at the end */
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(30%); 
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); /* End at the final position */
+    opacity: 1; /* Fully visible at the end */
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-30%); 
+    opacity: 0;
+  }
+}
+
+@keyframes pulseFullScreen {
+
+}
+
+@keyframes flashFullScreen {
+
+}
+
+@keyframes pulseBrightness {
+  0%{
+    filter: brightness(1);
+  }
+  25%{
+    filter: brightness(0);
+  }
+  50%{
+    filter: brightness(1);
+  }
+  75%{
+    filter: brightness(0);
+  }
+  100%{
+    filter: brightness(1);
+  }
+}
+
+@keyframes fadeAway {
+  0%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes tempGrow {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.25);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes tempShrink {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.75);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes slideAttack {
+  0%{
+    transform: translateX(0%);
+  }
+  70%{
+    transform: translateX(-15%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideYAttack {
+  0%{
+    transform: translateY(0%);
+  }
+  70%{
+    transform: translateY(-15%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes wigglePokemon {
+  0%{
+    transform: translateX(0%);
+  }
+  25%{
+    transform: translateX(5%);
+  }
+  50%{
+    transform: translateX(-5%);
+  }
+  75%{
+    transform: translateX(5%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+/*make more dramatic (faster?)*/
+
+@keyframes shakePokemon {
+  0%{
+    transform: translateX(0%);
+  }
+  25%{
+    transform: translateX(10%);
+  }
+  50%{
+    transform: translateX(-10%);
+  }
+  75%{
+    transform: translateX(10%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+/*load all 9 images on each self and opp to apply effects*/
+
+@keyframes overlayEffect {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
