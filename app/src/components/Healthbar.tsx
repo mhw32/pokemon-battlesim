@@ -47,7 +47,7 @@ const Healthbar = ({
       const colorTimeout = setTimeout(() => setBarColor(newColor), colorDelay * 1000);
       return () => clearTimeout(colorTimeout);
     }
-  }, [curHealth, maxHealth]);
+  }, [curHealth, maxHealth, colorDelay]);
   
   const getHealthBarWidth = () => {
     if (curHealth === 0) {

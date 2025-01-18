@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import BlinkingText from "../shared/BlinkingText";
 import Professor from "./Professor";
 import Battle from "./Battle";
-import toast from "react-hot-toast";
 
 type InputProps = {
   onWin: (score: number, team: number) => void;
@@ -128,6 +127,7 @@ const Game = ({ onWin, onSkip }: InputProps) => {
             width={600}
             height={600}
             style={{ borderRadius: 4 }}
+            alt="start screen"
           />
           <Box sx={{ position: "absolute", top: 50 }}>
             <BlinkingText text="press enter to play..." color="#0000FF"/>

@@ -804,7 +804,6 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
   const [curText, setCurText] = useState<string>("Professor Oak wants to fight!");
   // Variables for move sounds  
   const [actionSoundUrl, setActionSoundUrl] = useState<string>();
-  const [actionSoundIsPlaying, setActionSoundIsPlaying] = useState<boolean>(false);
   // Variables for animations
   const [showBlackBoxAnimation, setShowBlackBoxAnimation] = useState<boolean>(false);
   const [showMyOverlayAnimation, setShowMyOverlayAnimation] = useState<number>(-1);
@@ -1174,6 +1173,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, myPokemon, opPokemon, selectedAction, myMoveIdx, myIdx, opIdx, 
       selectedPokemon, myMoveEffect, opMoveEffect, turn, myTeam, opTeam]);
 
@@ -1321,6 +1321,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           style={{ position: "absolute" }} 
           src={`${process.env.PUBLIC_URL}/text-box-50.png`} 
           width={300}
+          alt="text box"
         />
         <Box
           sx={{ 
@@ -1376,6 +1377,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           style={{ position: "absolute" }} 
           src={`${process.env.PUBLIC_URL}/text-box-75.png`} 
           width={450}
+          alt="text box"
         />
         <Box
           sx={{ 
@@ -1467,6 +1469,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           style={{ position: "absolute" }} 
           src={`${process.env.PUBLIC_URL}/text-box-75.png`} 
           width={450}
+          alt="text box"
         />
         <Box
           sx={{ 
@@ -1482,7 +1485,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
         >
           {selectedPokemon === 0 && <BlinkingSideArrow />}
-          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[0].isDead || myPokemon.name == myTeam[0].name) ? 0.4 : 1 }}> 
+          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[0].isDead || myPokemon.name === myTeam[0].name) ? 0.4 : 1 }}> 
             {myTeam[0].name.toUpperCase()}
           </Typography>
         </Box>
@@ -1500,7 +1503,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
         >
           {selectedPokemon === 1 && <BlinkingSideArrow />}
-          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[1].isDead || myPokemon.name == myTeam[1].name) ? 0.4 : 1 }}> 
+          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[1].isDead || myPokemon.name === myTeam[1].name) ? 0.4 : 1 }}> 
             {myTeam[1].name.toUpperCase()}
           </Typography>
         </Box>
@@ -1518,7 +1521,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
         >
           {selectedPokemon === 2 && <BlinkingSideArrow />}
-          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[2].isDead || myPokemon.name == myTeam[2].name) ? 0.4 : 1 }}> 
+          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[2].isDead || myPokemon.name === myTeam[2].name) ? 0.4 : 1 }}> 
             {myTeam[2].name.toUpperCase()}
           </Typography>
         </Box>
@@ -1536,7 +1539,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
         >
           {selectedPokemon === 3 && <BlinkingSideArrow />}
-          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[3].isDead || myPokemon.name == myTeam[3].name) ? 0.4 : 1 }}> 
+          <Typography style={{ fontWeight: "light", fontSize: 24, lineHeight: 2.3, opacity: (myTeam[3].isDead || myPokemon.name === myTeam[3].name) ? 0.4 : 1 }}> 
             {myTeam[3].name.toUpperCase()}
           </Typography>
         </Box>
@@ -1566,7 +1569,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
           key={`animation-op-${animation}`}
         >
-          <img src={animation} height={180} />
+          <img src={animation} height={180} alt="animation" />
         </Box>
       )
     });
@@ -1586,7 +1589,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           }}
           key={`animation-my-${animation}`}
         >
-          <img src={animation} height={180} />
+          <img src={animation} height={180} alt="animation" />
         </Box>
       )
     });
@@ -1634,6 +1637,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           <img 
             src={`${process.env.PUBLIC_URL}/professor.png`} 
             height={180} 
+            alt="professor oak"
           />
         </Box>
       ) : (
@@ -1653,6 +1657,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
               opacity: opPokemonOpacity,
               animation: opPokemonAnimation,
             }}
+            alt="opponent pokemon"
             onAnimationEnd={() => {
               setOpPokemonOpacity(1);
               setOpPokemonAnimation(undefined);
@@ -1692,7 +1697,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
             width: '100%', // Ensures the box takes full width
           }}
         >
-          <img src={`${process.env.PUBLIC_URL}/ash.png`} height={200} />
+          <img src={`${process.env.PUBLIC_URL}/ash.png`} height={200} alt="ash"/>
         </Box>
       ): (
         <Box
@@ -1711,6 +1716,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
               opacity: myPokemonOpacity,
               animation: myPokemonAnimation,
             }}
+            alt="my pokemon"
             onAnimationEnd={() => {
               setMyPokemonOpacity(1);
               setMyPokemonAnimation(undefined);
@@ -1753,6 +1759,7 @@ const Battle = ({ team, onWin, stopAudio }: InputProps) => {
           style={{ position: "absolute" }} 
           src={`${process.env.PUBLIC_URL}/text-box.png`} 
           width={600} 
+          alt="text box"
         />
         <Box
           sx={{ px: 7, pt: 5 }}

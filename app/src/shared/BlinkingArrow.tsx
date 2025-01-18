@@ -12,6 +12,7 @@ const BlinkingImage = () => {
         src={`${process.env.PUBLIC_URL}/down-arrow.png`} 
         width={40} 
         style={blinkStyle}
+        alt="down arrow"
       />
       <style>
         {`

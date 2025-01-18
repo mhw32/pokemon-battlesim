@@ -40,6 +40,7 @@ const Professor = ({ setTeam, onComplete }: InputProps) => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, selected]);
 
   const getText = () => {
@@ -90,7 +91,7 @@ const Professor = ({ setTeam, onComplete }: InputProps) => {
         style={{ textAlign: "center" }}
         sx={{ pt: 12, pb: 2, pl: mode === 8 ? 46 : 0 }}
       >
-        <img src={`${process.env.PUBLIC_URL}/professor.png`} height={280} />
+        <img src={`${process.env.PUBLIC_URL}/professor.png`} height={280} alt="professor oak" />
       </Box>
       <Box
         style={{
@@ -105,6 +106,7 @@ const Professor = ({ setTeam, onComplete }: InputProps) => {
         <img 
           style={{ position: "absolute" }} 
           src={`${process.env.PUBLIC_URL}/text-box.png`} 
+          alt="text box"
           width={600} 
         />
         <Box
@@ -140,7 +142,8 @@ const Professor = ({ setTeam, onComplete }: InputProps) => {
         >
           <img 
             style={{ position: "absolute" }} 
-            src={`${process.env.PUBLIC_URL}/square-box.png`} 
+            src={`${process.env.PUBLIC_URL}/square-box.png`}
+            alt="square box"
             width={400}
           />
           <Box

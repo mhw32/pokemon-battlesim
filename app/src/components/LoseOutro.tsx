@@ -71,7 +71,7 @@ const LoseOutro = () => {
             style={{ textAlign: "center" }}
             sx={{ pt: 12, pb: 2, pl: mode === 6 ? 46 : 0 }}
           >
-            <img src={`${process.env.PUBLIC_URL}/professor.png`} height={280} />
+            <img src={`${process.env.PUBLIC_URL}/professor.png`} height={280} alt="professor oak" />
           </Box>
           <Box
             style={{
@@ -87,6 +87,7 @@ const LoseOutro = () => {
               style={{ position: "absolute" }} 
               src={`${process.env.PUBLIC_URL}/text-box.png`} 
               width={600} 
+              alt="text box"
             />
             <Box
               sx={{ px: 7, pt: 5 }}

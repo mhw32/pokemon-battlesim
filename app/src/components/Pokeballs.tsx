@@ -9,11 +9,11 @@ type InputProps = {
 const Pokeballs = ({ isActive, isOpponent, numTotal }: InputProps) => {
   const getImage = (index: number) => {
     if (index >= isActive.length) {
-      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-empty.png`} height={30} />
+      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-empty.png`} height={30} alt="empty pokeball" />
     } else if (isActive[index]) {
-      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-alive.png`} height={30} />
+      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-alive.png`} height={30} alt="alive pokeball" />
     } else {
-      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-dead.png`} height={30} />
+      return <img src={`${process.env.PUBLIC_URL}/pokeball/ball-dead.png`} height={30} alt="dead pokeball" />
     }
   }
   let indices: number[] = [];
