@@ -30,7 +30,7 @@ const Game = ({ onWin, onSkip }: InputProps) => {
     if (mode === 0) {
       // Track enter is pressed
       const handleKeyPress = (e) => {
-        if (e.key === 'Enter') setMode(2);
+        if (e.key === 'Enter') setMode(2);  // no mode 1
       };
       window.addEventListener('keydown', handleKeyPress);
       return () => {

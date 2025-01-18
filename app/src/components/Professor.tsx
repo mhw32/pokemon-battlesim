@@ -47,11 +47,11 @@ const Professor = ({ setTeam, onComplete }: InputProps) => {
     if (mode === 0) {
       return "Hello there! Welcome to the world of Wuliumon!";
     } else if (mode === 1) {
-      return "My name is Professor Oak. I hear you have been invited";
+      return "My name is Professor Oak. I hear you are looking to";
     } else if (mode === 2) {
-      return "to the wedding of Mike and Connie.";
+      return "test your skills!";
     } else if (mode === 3) {
-      return "Not so fast I say.  First, you’ll have to defeat me...";
+      return "Then, I guess you'll have to face me...";
     } else if (mode === 4) {
       return "in a Wuliumon battle!";
     } else if (mode === 5) {

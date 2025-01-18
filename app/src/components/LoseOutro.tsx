@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import SlowText from "../shared/SlowText";
 import BlinkingArrow from "../shared/BlinkingArrow";
 
-
 const LoseOutro = () => {
   const [mode, setMode] = useState<number>(0);
 
@@ -30,7 +29,7 @@ const LoseOutro = () => {
     if (mode === 0) {
       return "Not so lucky this time...";
     } else if (mode === 1) {
-      return "And you know what that means.  No win, no invite.";
+      return "And you know what that means.  No win, no cigar.";
     } else if (mode === 2) {
       return "Come back later (or refresh the page). ";
     }
@@ -47,7 +46,7 @@ const LoseOutro = () => {
         height: 600,
         margin: "0 auto",
         borderRadius: 4,
-        position: 'relative', // Add relative positioning
+        position: 'relative',
       }}
     >
       <audio autoPlay src={`${process.env.PUBLIC_URL}/music/1-36. LoseOutro.mp3`} />         
@@ -55,11 +54,7 @@ const LoseOutro = () => {
         <Box 
           justifyContent="center" 
           alignItems="center"
-          sx={{
-            display: 'flex', // Flexbox for centering content inside this Box
-            height: '100%', // Ensure it takes full height to center vertically
-            width: '100%',  // Ensure it takes full width to center horizontally
-          }}
+          sx={{ display: 'flex', height: '100%', width: '100%' }}
         >
           <Typography style={{ fontWeight: "bold", fontSize: 30, color: "white" }}> 
             GAME OVER
@@ -75,12 +70,10 @@ const LoseOutro = () => {
           </Box>
           <Box
             style={{
-              position: "absolute", // Absolute positioning for the text box
-              bottom: 180, // Adjusts the bottom distance from the white box border
+              position: "absolute",
+              bottom: 180,
               left: 0,
-              // left: "50%", // Centers the text horizontally
-              // transform: "translateX(-50%)", // Centers the box relative to its width
-              width: '100%', // Ensures the box takes full width
+              width: '100%',
             }}
           >
             <img 

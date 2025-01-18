@@ -29,9 +29,9 @@ const WinOutro = ({ onWin }: InputProps) => {
 
   const getText = (): string => {
     if (mode === 0) {
-      return "Unbelievable!  Well, I guess you earned this...";
+      return "Unbelievable! Well, I guess you earned this...";
     } else if (mode === 1) {
-      return "You received an INVITATION!";
+      return "You are a Wuliumon champion!";
     } 
     return "";
   }

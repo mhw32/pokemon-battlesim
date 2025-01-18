@@ -40,11 +40,12 @@ const MainView = () => {
       <Grid item xs={6}>
         <Box sx={{ pt: 4 }}>
           {isMobile ? <MobileGame /> : (
-            gameComplete ? <></> :
-            <Game 
-              onWin={(score: number, team: number) => setGameComplete(true) } 
-              onSkip={() => setGameComplete(true)}
-            />
+            !gameComplete && (
+              <Game 
+                onWin={(score: number, team: number) => setGameComplete(true) } 
+                onSkip={() => setGameComplete(true)}
+              />
+            )
           )}
         </Box>
         <Box sx={{ mt: 12, mb: 4, textAlign: "center" }}>
