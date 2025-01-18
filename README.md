@@ -2,7 +2,7 @@
 
 **🐱 Ever dreamed of making your friends into Pokemon? Now you can. 🐭**
 
-This project is a Pokemon battle simulator that lets you replace the Pokemon with names and moves inspired by your friends. If you’ve ever told your friends what Pokemon they would be — this is the game for you. Customize the Pokemon, pit friends against friends, and see who would win.
+This project is a Pokemon battle simulator that lets you replace the Pokemon with names and moves inspired by your friends. If you've ever told your friends what Pokemon they would be — this is the game for you. Customize the Pokemon, pit friends against friends, and see who would win.
 
 | ![GIF 1](./assets/1intro.gif) | ![GIF 2](./assets/3battlestart.gif) | ![GIF 3](./assets/4battleattack.gif) |
 |----------------------------------------|----------------------------------------|----------------------------------------|
@@ -14,6 +14,7 @@ We wanted to make it personalized and nostalgic at the same time, so we borrowed
 You can give our demo version a try, and when you're ready to make your own custom version, follow the instructions below. Gotta catch 'em all! 
 
 ## Customization
+
 You can customize Pokemon names and moves by making changes in **battle.tsx**. Each team has 4 Pokemon, for a total of 8. 
 We used the following references for move accuracy, power, and type. 
 
@@ -23,7 +24,7 @@ We used the following references for move accuracy, power, and type.
 
 **Pokemon Base Stats:** https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_base_stats_in_Generation_VII
 
-We were pretty loosey goosey about move type matching the Pokemon since it mattered to us more to do funny moves. Some of the moves we assigned our friends (like “Read Book” or “Swift Exit” were based on other moves and just renamed to better fit our friends’ quirks).
+We were pretty loosey goosey about move type matching the Pokemon since it mattered to us more to do funny moves. Some of the moves we assigned our friends (like "Read Book" or "Swift Exit" were based on other moves and just renamed to better fit our friends' quirks). Check out `app/src/components/Battle.tsx` for the moves. 
 
 ## Installation
 
