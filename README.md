@@ -13,9 +13,6 @@ We wanted to make it personalized and nostalgic at the same time, so we borrowed
 
 You can give our demo version a try, and when you're ready to make your own custom version, follow the instructions below. Gotta catch 'em all! 
 
-## Setup
-These instructions are for
-
 ## Customization
 You can customize Pokemon names and moves by making changes in **battle.tsx**. Each team has 4 Pokemon, for a total of 8. 
 We used the following references for move accuracy, power, and type. 
