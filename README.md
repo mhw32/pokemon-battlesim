@@ -1,6 +1,6 @@
 # Pokemon Battle Sim
 
-[demo](https://pokemon-battlesim.vercel.app/)
+[[demo]](https://pokemon-battlesim.vercel.app/)
 
 **🐱 Ever dreamed of making your friends into Pokemon? Now you can. 🐭**
 
