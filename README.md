@@ -20,9 +20,9 @@ You can give our [demo](https://pokemon-battlesim.vercel.app/) version a try, an
 You can customize Pokemon names and moves by making changes in `app/src/components/Battle.tsx`. Each team has 4 Pokemon, for a total of 8. 
 We used the following references for move accuracy, power, and type. 
 
-[**Attacks**](https://bulbapedia.bulbagarden.net/wiki/List_of_moves)
-[**Attack Audios**](https://bellblitzking.itch.io/pokemon-sound-collection#download)
-[**Pokemon Base Stats**](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_base_stats_in_Generation_VII)
+- [**Attacks**](https://bulbapedia.bulbagarden.net/wiki/List_of_moves)
+- [**Attack Audios**](https://bellblitzking.itch.io/pokemon-sound-collection#download)
+- [**Pokemon Base Stats**](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_base_stats_in_Generation_VII)
 
 We were pretty loosey goosey about move type matching the Pokemon since it mattered to us more to do funny moves. Some of the moves we assigned our friends (like "Read Book" or "Swift Exit" were based on other moves and just renamed to better fit our friends' quirks). 
 
